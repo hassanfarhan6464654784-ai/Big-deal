@@ -1,7 +1,7 @@
 const { Client, GatewayIntentBits } = require("discord.js");
 
 // 🔐 YAHAN APNA BOT TOKEN DALO
-const TOKEN = "PASTE_YOUR_BOT_TOKEN_HERE";
+const TOKEN = "MTQ5OTc5Mzk3OTkxNzYwMjg0Nw.GO9Mli.2mXN5ADaUg7LxBIswCSPE1bLn21LxonU-ytiO4";
 
 const client = new Client({
   intents: [GatewayIntentBits.Guilds]
