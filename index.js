@@ -23,3 +23,5 @@ client.on("interactionCreate", async (interaction) => {
 
 // 🔐 Login
 client.login(TOKEN);
+console.log("TOKEN LEN:", process.env.TOKEN?.length);
+console.log("TOKEN START:", process.env.TOKEN?.slice(0,5));
