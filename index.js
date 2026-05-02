@@ -1,0 +1,25 @@
+const { Client, GatewayIntentBits } = require("discord.js");
+
+// 🔐 YAHAN APNA BOT TOKEN DALO
+const TOKEN = "PASTE_YOUR_BOT_TOKEN_HERE";
+
+const client = new Client({
+  intents: [GatewayIntentBits.Guilds]
+});
+
+// ✅ Ready event
+client.once("ready", () => {
+  console.log(`🔥 Bot Online: ${client.user.tag}`);
+});
+
+// ✅ Basic command test (slash commands ke bina bhi chalega)
+client.on("interactionCreate", async (interaction) => {
+  if (!interaction.isChatInputCommand()) return;
+
+  if (interaction.commandName === "ping") {
+    await interaction.reply("🏓 Pong!");
+  }
+});
+
+// 🔐 Login
+client.login(TOKEN);
