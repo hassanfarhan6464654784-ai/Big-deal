@@ -1,7 +1,7 @@
 const { Client, GatewayIntentBits } = require("discord.js");
 
 // 🔐 YAHAN APNA BOT TOKEN DALO
-const TOKEN = "MTQ5OTc5Mzk3OTkxNzYwMjg0Nw.GO9Mli.2mXN5ADaUg7LxBIswCSPE1bLn21LxonU-ytiO4";
+const TOKEN = "";
 
 const client = new Client({
   intents: [GatewayIntentBits.Guilds]
@@ -25,3 +25,13 @@ client.on("interactionCreate", async (interaction) => {
 client.login(TOKEN);
 console.log("TOKEN LEN:", process.env.TOKEN?.length);
 console.log("TOKEN START:", process.env.TOKEN?.slice(0,5));
+const express = require("express");
+const app = express();
+
+app.get("/", (req, res) => {
+  res.send("Bot is running!");
+});
+
+app.listen(3000, () => {
+  console.log("🌐 Web server running on port 3000");
+});
